@@ -59,7 +59,7 @@ inline void acur_init3(struct acur *c, size_t element_size, void *data, size_t s
 	c->index = 0;
 	c->size = end_index - start_index;
 	c->element_size = element_size;
-	c->data = data + acur_data_index(c, start_index);
+	c->data = (char *) data + acur_data_index(c, start_index);
 }
 
 /*
