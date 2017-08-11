@@ -1,5 +1,5 @@
 AC_PREREQ([2.69])
-AC_INIT([acur], [1.0.0], [https://github.com/daniel-araujo/acur/issues])
+AC_INIT([acur], [1.0.1], [https://github.com/daniel-araujo/acur/issues])
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 
