@@ -6,8 +6,8 @@ A cursor for arrays in C.
 ## Table of contents
 
 1. Introduction
-3. Examples
-2. How to use
+2. Example
+3. How to use
 4. Reporting Bugs
 5. License
 
@@ -18,13 +18,14 @@ Acur is a C library that provides a structure that can keep track of your
 position in an array as you traverse over its elements.
 
 The functions in this library assume that they're going to be used correctly.
-This is in the same spirit that the language is designed with that makes it so
-efficient. The programmer is trusted.
+This is in the same spirit that the C language is designed with that allows it
+to be efficient.
+
+All functions are marked `inline` so that no operation incurs a function call
+overhead if the compiler agrees that it's worth it.
 
 
-## 2. Examples
-
-Here's how you would iterate over an array to the end.
+## 2. Example
 
 ```C
 #include <stdio.h>
@@ -62,15 +63,13 @@ int main(void)
 
 You can either copy the source files into your own project or install the
 header file and the static library in your system and have your compiler link
-to `libacur.a`.
-
-In your code you're going to need to include the `acur.h` header file.
+to `libacur.a`. Then include `acur.h` in your code.
 
 ```C
 #include <acur.h>
 ```
 
-Then you can declare variables of type `struct acur`.
+This lets you declare variables of type `struct acur`.
 
 ```C
 struct acur my_cursor;
@@ -107,7 +106,7 @@ by calling `acur_element`.
 int *element = acur_element(&my_cursor);
 ```
 
-To move on to the next element you call `acur_next`.
+To move to the next element you call `acur_next`.
 
 ```C
 acur_next(&my_cursor);
@@ -125,8 +124,8 @@ Call `acur_rewind` to move the cursor back to the first element.
 acur_rewind(&my_cursor);
 ```
 
-Read the comments in the `acur.h` header file for detailed descriptions of
-these functions and others.
+Read the comments in the `acur.h` header file for detailed descriptions of all
+functions
 
 
 ## 4. Reporting bugs
