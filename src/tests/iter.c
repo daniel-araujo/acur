@@ -10,7 +10,7 @@ int main(void)
 	int array[] = { 1, 2, 3 };
 
 	struct acur c;
-	acur_init1(&c, sizeof(int), array, 3);
+	acur_init(&c, sizeof(int), array, 3);
 
 	if (acur_begin(&c) != &array[0]) {
 		fprintf(stderr, "Pointer to the first element is incorrect.\n");

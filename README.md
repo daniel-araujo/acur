@@ -41,7 +41,7 @@ int main(void)
 	struct acur cursor;
 
 	// Initialize the cursor.
-	acur_init1(&cursor, sizeof(int), array, 3);
+	acur_init(&cursor, sizeof(int), array, 3);
 
 	// Iterate to the end.
 	while (!acur_finished(&cursor)) {
@@ -82,7 +82,7 @@ instead.
 The first thing you will want to do is to initialize the struct. You have 3
 functions that allow you to initialize the struct:
 
-- `acur_init1`: Takes the size of each element, a pointer to the array and its
+- `acur_init`: Takes the size of each element, a pointer to the array and its
   size.
 - `acur_init2`: Takes the size of each element, a pointer to the first element
   and a pointer to where it ends.
@@ -92,7 +92,7 @@ functions that allow you to initialize the struct:
 ```C
 int array[5];
 
-acur_init1(&my_cursor1, sizeof(int), array, 5);
+acur_init(&my_cursor1, sizeof(int), array, 5);
 acur_init2(&my_cursor2, sizeof(int), array, array + 5);
 acur_init3(&my_cursor3, sizeof(int), array, 0, 5);
 ```

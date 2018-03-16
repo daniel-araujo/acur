@@ -5,7 +5,7 @@
 
 /*
  * The acur struct. Declare variables of this type and initialize them by
- * calling either acur_init1, acur_init2 or acur_init3.
+ * calling either acur_init, acur_init2 or acur_init3.
  */
 struct acur {
 	size_t index;
@@ -29,12 +29,20 @@ inline size_t acur_data_index(struct acur *c, size_t index)
  * Initializes a cursor. It expects you to pass a pointer to the array, the
  * size of each element and the size of the array.
  */
-inline void acur_init1(struct acur *c, size_t element_size, void *data, size_t size)
+inline void acur_init(struct acur *c, size_t element_size, void *data, size_t size)
 {
 	c->index = 0;
 	c->size = size;
 	c->element_size = element_size;
 	c->data = data;
+}
+
+/*
+ * Alias for acur_init.
+ */
+inline void acur_init1(struct acur *c, size_t element_size, void *data, size_t size)
+{
+	return acur_init(c, element_size, data, size);
 }
 
 /*

@@ -17,7 +17,7 @@ int main(void)
 
 	struct acur c[3];
 
-	acur_init1(&c[0], array_element_size, array, array_size);
+	acur_init(&c[0], array_element_size, array, array_size);
 	acur_init2(&c[1], array_element_size, array, array_end);
 	acur_init3(&c[2], array_element_size, array, array_start_index, array_end_index);
 

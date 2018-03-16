@@ -2,6 +2,8 @@
 
 extern inline size_t acur_data_index(struct acur *c, size_t index);
 
+extern inline void acur_init(struct acur *c, size_t element_size, void *data, size_t size);
+
 extern inline void acur_init1(struct acur *c, size_t element_size, void *data, size_t size);
 
 extern inline void acur_init2(struct acur *c, size_t element_size, void *start_data, void *end_data);
