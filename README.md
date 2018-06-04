@@ -130,9 +130,9 @@ functions
 
 ## 4. Reporting bugs
 
-If you encounter a bug, please open an issue on GitHub:
+If you encounter a bug, please open an issue on GitLab:
 
-	https://github.com/daniel-araujo/acur/issues
+	https://gitlab.com/daniel-araujo/acur/issues
 
 
 ## 5. License
