@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "acur.h"
+#include "../src/acur.h"
 
 /*
  * Tests whether the initialization functions work correctly.
