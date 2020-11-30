@@ -1,4 +1,4 @@
-# Acur 1.1.2
+# Acur 1.1.3
 
 A cursor for arrays in C.
 
